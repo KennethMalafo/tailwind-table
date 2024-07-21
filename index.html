@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="container mx-auto">
+        <!-- Search and Role Filter -->
+        <div class="flex justify-between mb-4">
+            <div class="flex items-center">
+                <input type="text" placeholder="Search..." class="bg-white shadow-md rounded px-4 py-2 w-full mr-2"/>
+                <select class="bg-white shadow-md rounded px-4 py-2">
+                    <option>All</option>
+                    <option>Admin</option>
+                    <option>Staff</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="bg-white shadow-md rounded my-6 overflow-x-auto">
+            <table class="min-w-max w-full table-auto">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                        <th class="py-3 px-6 text-left">Name</th>
+                        <th class="py-3 px-6 text-left">Title</th>
+                        <th class="py-3 px-6 text-center">Status</th>
+                        <th class="py-3 px-6 text-center">Age</th>
+                        <th class="py-3 px-6 text-center">Role</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-600 text-sm font-light">
+                    <tr class="border-b border-gray-200 hover:bg-gray-100">
+                        <td class="py-3 px-6 text-left whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div class="mr-2">
+                                    <img class="w-6 h-6 rounded-full" src="https://randomuser.me/api/portraits/women/1.jpg" alt=""/>
+                                </div>
+                                <span>Jane Cooper</span>
+                            </div>
+                            <div class="text-gray-500">jane.cooper@example.com</div>
+                        </td>
+                        <td class="py-3 px-6 text-left">
+                            Regional Paradigm Technician
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Active</span>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            27
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            Admin
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 bg-gray-50 hover:bg-gray-100">
+                        <td class="py-3 px-6 text-left whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div class="mr-2">
+                                    <img class="w-6 h-6 rounded-full" src="https://randomuser.me/api/portraits/men/2.jpg" alt=""/>
+                                </div>
+                                <span>Cody Fisher</span>
+                            </div>
+                            <div class="text-gray-500">cody.fisher@example.com</div>
+                        </td>
+                        <td class="py-3 px-6 text-left">
+                            Product Directives Officer
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">Inactive</span>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            43
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            Staff
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-between items-center mt-4"> 
+            <div class="flex items-center"> <span class="text-gray-600 mr-2">Page 1 of 4</span> 
+                <select class="bg-white shadow-md rounded px-4 py-2"> 
+                    <option>Show 5</option> 
+                    <option>Show 10</option> 
+                    <option>Show 15</option> 
+                </select> 
+            </div>
+
+        <div class="flex justify-end items-center mt-4">
+            <div class="flex">
+                <button class="bg-gray-200 text-gray-600 py-2 px-4 rounded-l-md">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button class="bg-gray-200 text-gray-600 py-2 px-4 rounded-r-md">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
